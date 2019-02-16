@@ -1,0 +1,1731 @@
+﻿@font-face {
+    font-family: "Batch Icons";
+    src: url('../batch-icons-webfont.eot');
+    src: url('../batch-icons-webfont.eot?#iefix') format('embedded-opentype'), url('../batch-icons-webfont.woff') format('woff'), url('../batch-icons-webfont.ttf') format('truetype'), url('../batch-icons-webfont.svg#batchregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.batch-icon {
+    font-family: "Batch Icons"; /*or whatever you've decalred your font name as*/
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1;
+    display: inline-block;
+    font-style:normal;
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-speech-bubble-left-tip:before {
+    content: "\F000";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-speech-bubble-middle-tip:before {
+    content: "\F001";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-speech-bubble-right-tip:before {
+    content: "\F002";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-speech-bubble-left-tip-text:before {
+    content: "\F003";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-speech-bubble-middle-tip-text:before {
+    content: "\F004";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-speech-bubble-right-tip-text:before {
+    content: "\F005";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-speech-bubble-left-tip-solid-text:before {
+    content: "\F006";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-speech-bubble-middle-tip-solid-text:before {
+    content: "\F007";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-speech-bubble-right-tip-solid-text:before {
+    content: "\F008";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-speech-bubble-left-tip-chat:before {
+    content: "\F009";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-speech-bubble-right-tip-chat:before {
+    content: "\F00A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser:before {
+    content: "\F00B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-new-window:before {
+    content: "\F00C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-minimise:before {
+    content: "\F00D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-close:before {
+    content: "\F00E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-upload:before {
+    content: "\F010";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-download:before {
+    content: "\F011";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-terminal:before {
+    content: "\F012";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-windows:before {
+    content: "\F013";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-alt:before {
+    content: "\F014";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-alt-new-window:before {
+    content: "\F015";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-alt-minimise:before {
+    content: "\F016";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-alt-close:before {
+    content: "\F017";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-alt-upload:before {
+    content: "\F018";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-alt-download:before {
+    content: "\F019";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-terminal-alt:before {
+    content: "\F01A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-browser-alt-windows:before {
+    content: "\F01B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-windows:before {
+    content: "\F01C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-plus:before {
+    content: "\F01D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-minus:before {
+    content: "\F01E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-marquee:before {
+    content: "\F020";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-marquee-plus:before {
+    content: "\F021";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-marquee-minus:before {
+    content: "\F022";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-marquee-upload:before {
+    content: "\F023";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-marquee-download:before {
+    content: "\F024";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-crate:before {
+    content: "\F025";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-grid:before {
+    content: "\F026";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-grid-alt:before {
+    content: "\F027";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-list:before {
+    content: "\F028";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-list-alt:before {
+    content: "\F029";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-in:before {
+    content: "\F02A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-out:before {
+    content: "\F02B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-inbox:before {
+    content: "\F02C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-outbox:before {
+    content: "\F02D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-outgoing:before {
+    content: "\F02E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-paragraph-justify:before {
+    content: "\F030";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-paragraph-left:before {
+    content: "\F031";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-paragraph-center:before {
+    content: "\F032";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-paragraph-right:before {
+    content: "\F033";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-paragraph-alt-justify:before {
+    content: "\F034";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-paragraph-alt-left:before {
+    content: "\F035";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-paragraph-alt-center:before {
+    content: "\F036";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-paragraph-alt-right:before {
+    content: "\F037";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-audio-mute:before {
+    content: "\F038";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-audio-low:before {
+    content: "\F039";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-audio-mid:before {
+    content: "\F03A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-audio-high:before {
+    content: "\F03B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-brightness-high:before {
+    content: "\F03C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-brightness-low:before {
+    content: "\F03D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-contrast:before {
+    content: "\F03E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-image:before {
+    content: "\F040";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-video:before {
+    content: "\F041";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-video-alt:before {
+    content: "\F042";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-user:before {
+    content: "\F043";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-user-alt:before {
+    content: "\F044";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-users:before {
+    content: "\F045";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-user-alt-2:before {
+    content: "\F046";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-polaroid:before {
+    content: "\F047";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-polaroid-alt:before {
+    content: "\F048";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-heart-full:before {
+    content: "\F049";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-heart-half:before {
+    content: "\F04A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-heart-empty:before {
+    content: "\F04B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-settings:before {
+    content: "\F04C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-settings-alt:before {
+    content: "\F04D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-settings-alt-2:before {
+    content: "\F04E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-flask-full:before {
+    content: "\F050";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-flask-empty:before {
+    content: "\F051";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-switch-on:before {
+    content: "\F052";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-switch-off:before {
+    content: "\F053";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-toggle-on:before {
+    content: "\F054";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-toggle-off:before {
+    content: "\F055";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-bin:before {
+    content: "\F056";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-bin-alt:before {
+    content: "\F057";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-stiffy:before {
+    content: "\F058";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-floppy:before {
+    content: "\F059";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-notes:before {
+    content: "\F05A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-calendar:before {
+    content: "\F05B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-reminder:before {
+    content: "\F05C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-clipboard:before {
+    content: "\F05D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-clipboard-alt:before {
+    content: "\F05E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-terminal-alt-2:before {
+    content: "\F060";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-code:before {
+    content: "\F061";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-curlybrace:before {
+    content: "\F062";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-curlybrace-alt:before {
+    content: "\F063";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-square-brackets:before {
+    content: "\F064";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-cmd:before {
+    content: "\F065";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-section:before {
+    content: "\F066";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-infinity:before {
+    content: "\F067";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-tilde:before {
+    content: "\F068";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-power:before {
+    content: "\F069";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-keys:before {
+    content: "\F06A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-mixer:before {
+    content: "\F06B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-wave:before {
+    content: "\F06C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-wave-alt:before {
+    content: "\F06D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-vinyl:before {
+    content: "\F06E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-spool:before {
+    content: "\F070";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-casette:before {
+    content: "\F071";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-voicemail:before {
+    content: "\F072";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-microphone:before {
+    content: "\F073";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-microphone-alt:before {
+    content: "\F074";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-bullhorn:before {
+    content: "\F075";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-bullhorn-alt:before {
+    content: "\F076";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-headphones:before {
+    content: "\F077";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-camera:before {
+    content: "\F078";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-camera-alt:before {
+    content: "\F079";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-camera-alt-2:before {
+    content: "\F07A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-pin:before {
+    content: "\F07B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-pin-alt:before {
+    content: "\F07C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-map:before {
+    content: "\F07D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-map-alt:before {
+    content: "\F07E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-user-card:before {
+    content: "\F080";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-full:before {
+    content: "\F081";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-80:before {
+    content: "\F082";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-60:before {
+    content: "\F083";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-40:before {
+    content: "\F084";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-20:before {
+    content: "\F085";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-empty:before {
+    content: "\F086";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-charge:before {
+    content: "\F087";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-alt-100:before {
+    content: "\F088";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-alt-80:before {
+    content: "\F089";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-alt-60:before {
+    content: "\F08A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-alt-40:before {
+    content: "\F08B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-alt-20:before {
+    content: "\F08C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-alt--empty:before {
+    content: "\F08D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-battery-alt-charge:before {
+    content: "\F08E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-clock:before {
+    content: "\F090";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-flux:before {
+    content: "\F091";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-sleep:before {
+    content: "\F092";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-nope:before {
+    content: "\F093";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-search:before {
+    content: "\F094";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-zoom-in:before {
+    content: "\F095";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-zoom-out:before {
+    content: "\F096";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-search-alt:before {
+    content: "\F097";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-zoom-in-alt:before {
+    content: "\F098";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-zoom-out-alt:before {
+    content: "\F099";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-eye:before {
+    content: "\F09A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-eye-alt:before {
+    content: "\F09B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-wifi-low:before {
+    content: "\F09C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-wifi-half:before {
+    content: "\F09D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-wifi-full:before {
+    content: "\F09E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-expand:before {
+    content: "\F0A0";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-contract:before {
+    content: "\F0A1";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-expand-alt:before {
+    content: "\F0A2";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-contract-alt:before {
+    content: "\F0A3";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-expand-alt-2:before {
+    content: "\F0A4";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-maximise:before {
+    content: "\F0A5";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-contract-alt-2:before {
+    content: "\F0A6";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-menu-pull-down:before {
+    content: "\F0A7";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-menu-pull-up:before {
+    content: "\F0A8";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-menu:before {
+    content: "\F0A9";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-menu-alt:before {
+    content: "\F0AA";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-tag:before {
+    content: "\F0AB";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-tag-alt:before {
+    content: "\F0AC";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-tag-alt-2:before {
+    content: "\F0AD";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-tag-alt-3:before {
+    content: "\F0AE";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-refresh:before {
+    content: "\F0B0";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-repeat:before {
+    content: "\F0B1";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-repeat-alt:before {
+    content: "\F0B2";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-shuffle:before {
+    content: "\F0B3";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-return:before {
+    content: "\F0B4";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-wiggle:before {
+    content: "\F0B5";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-split:before {
+    content: "\F0B6";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-split-alt:before {
+    content: "\F0B7";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-converge:before {
+    content: "\F0B8";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-swap:before {
+    content: "\F0B9";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-swap-alt:before {
+    content: "\F0BA";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-transfer:before {
+    content: "\F0BB";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-tray:before {
+    content: "\F0BC";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-inbox-alt:before {
+    content: "\F0BD";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-outbox-alt:before {
+    content: "\F0BE";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-key:before {
+    content: "\F0C0";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-key-alt:before {
+    content: "\F0C1";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-locked:before {
+    content: "\F0C2";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-unlocked:before {
+    content: "\F0C3";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-safe:before {
+    content: "\F0C4";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-spinner:before {
+    content: "\F0C5";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-spinner-alt:before {
+    content: "\F0C6";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-spinner-alt-2:before {
+    content: "\F0C7";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-stamp:before {
+    content: "\F0C8";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-stamp-alt:before {
+    content: "\F0C9";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-mail:before {
+    content: "\F0CA";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-mail-alt:before {
+    content: "\F0CB";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-mail-alt-2:before {
+    content: "\F0CC";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-address-book:before {
+    content: "\F0CD";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-address-book-alt:before {
+    content: "\F0CE";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-book:before {
+    content: "\F0D0";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-book-lines:before {
+    content: "\F0D1";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-book-alt-:before {
+    content: "\F0D2";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-book-alt-lines:before {
+    content: "\F0D3";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-paper-roll:before {
+    content: "\F0D4";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-paper-roll-ripped:before {
+    content: "\F0D5";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-paper-ripped:before {
+    content: "\F0D6";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-database:before {
+    content: "\F0D7";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-database-add:before {
+    content: "\F0D8";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-database-remove:before {
+    content: "\F0D9";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-support:before {
+    content: "\F0DA";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-support-alt:before {
+    content: "\F0DB";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-support-alt-2:before {
+    content: "\F0DC";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-podcast:before {
+    content: "\F0DD";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-podcast-alt:before {
+    content: "\F0DE";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-folder:before {
+    content: "\F0E0";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-folder-add:before {
+    content: "\F0E1";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-folder-remove:before {
+    content: "\F0E2";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-folder-duplicate:before {
+    content: "\F0E3";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-folder-alt:before {
+    content: "\F0E4";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-folder-alt-add:before {
+    content: "\F0E5";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-folder-alt-remove:before {
+    content: "\F0E6";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-folder-alt-duplicate:before {
+    content: "\F0E7";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-cloud:before {
+    content: "\F0E8";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-cloud-upload:before {
+    content: "\F0E9";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-cloud-download:before {
+    content: "\F0EA";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-cloud-add:before {
+    content: "\F0EB";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-cloud-remove:before {
+    content: "\F0EC";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-cloud-alt-add:before {
+    content: "\F0ED";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-cloud-alt-remove:before {
+    content: "\F0EE";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-store:before {
+    content: "\F100";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-store-alt:before {
+    content: "\F101";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-credit-card:before {
+    content: "\F102";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-credit-card-alt:before {
+    content: "\F103";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-credit-card-alt-2:before {
+    content: "\F104";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-credit-card-alt-3:before {
+    content: "\F105";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-wallet:before {
+    content: "\F106";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-wallet-alt:before {
+    content: "\F107";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-newspaper:before {
+    content: "\F108";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-newspaper-alt:before {
+    content: "\F109";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-document:before {
+    content: "\F10A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-document-add:before {
+    content: "\F11B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-document-remove:before {
+    content: "\F10C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-attachment:before {
+    content: "\F10D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-attachment-alt:before {
+    content: "\F10E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-align-top-edges:before {
+    content: "\F110";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-align-vertical-centers:before {
+    content: "\F111";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-align-bottom-edges:before {
+    content: "\F112";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-align-left-edges:before {
+    content: "\F113";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-align-horizontal-centers:before {
+    content: "\F114";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-align-right-edges:before {
+    content: "\F115";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-distribute-top-edges:before {
+    content: "\F116";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-distribute-vertical-centers:before {
+    content: "\F117";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-distribute-bottom-edges:before {
+    content: "\F118";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-distribute-left-edges:before {
+    content: "\F119";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-distribute-right-edges:before {
+    content: "\F11A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-distribute-horizontal-centers:before {
+    content: "\F11B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-unite:before {
+    content: "\F11C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-subtract:before {
+    content: "\F11D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-intersect:before {
+    content: "\F11E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-exclude:before {
+    content: "\F120";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-layout-left-sidebar:before {
+    content: "\F121";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-layout-center-column:before {
+    content: "\F122";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-layout-right-sidebar:before {
+    content: "\F123";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-layout-content-left:before {
+    content: "\F124";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-layout-content-right:before {
+    content: "\F125";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-layout-alt-content-left:before {
+    content: "\F126";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-layout-alt-content-right:before {
+    content: "\F127";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-rulers:before {
+    content: "\F128";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-swatch:before {
+    content: "\F129";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-swatches:before {
+    content: "\F12A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-crop:before {
+    content: "\F12B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-bulb:before {
+    content: "\F12C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-bulb-alt:before {
+    content: "\F12D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-droplet:before {
+    content: "\F12E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-print:before {
+    content: "\F130";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-shred:before {
+    content: "\F131";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-bell:before {
+    content: "\F132";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-bell-alt:before {
+    content: "\F133";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-bell-mute:before {
+    content: "\F134";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-bell-mute-alt:before {
+    content: "\F135";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-nib:before {
+    content: "\F136";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-quill:before {
+    content: "\F137";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-quill-alt:before {
+    content: "\F138";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-pencil:before {
+    content: "\F139";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-pen:before {
+    content: "\F13A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-compose:before {
+    content: "\F13B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-compose-alt:before {
+    content: "\F13C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-compose-alt-2:before {
+    content: "\F13D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-compose-alt-3:before {
+    content: "\F13E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-bullet:before {
+    content: "\F140";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-ellipsis:before {
+    content: "\F141";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-timeline:before {
+    content: "\F142";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-link:before {
+    content: "\F143";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-link-alt:before {
+    content: "\F144";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-anchor:before {
+    content: "\F145";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-asterisk:before {
+    content: "\F146";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-compass:before {
+    content: "\F147";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-arrow-up:before {
+    content: "\F148";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-arrow-down:before {
+    content: "\F149";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-arrow-left:before {
+    content: "\F14A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-arrow-right:before {
+    content: "\F14B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-add:before {
+    content: "\F14C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-remove:before {
+    content: "\F14D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-delete:before {
+    content: "\F14E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-mail-alt-3:before {
+    content: "\F150";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-at:before {
+    content: "\F151";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-envelope:before {
+    content: "\F152";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-mail-outgoing:before {
+    content: "\F153";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-mail-incoming:before {
+    content: "\F154";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-bin-alt-2:before {
+    content: "\F155";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-outgoing-alt:before {
+    content: "\F156";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-reply-all:before {
+    content: "\F157";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-reply:before {
+    content: "\F158";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-options:before {
+    content: "\F159";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-spam:before {
+    content: "\F15A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-spam-alt:before {
+    content: "\F15B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-star:before {
+    content: "\F15C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-star-alt:before {
+    content: "\F15D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-flag:before {
+    content: "\F15E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-flag-alt:before {
+    content: "\F160";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-home:before {
+    content: "\F161";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-home-alt:before {
+    content: "\F162";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-home-alt-2:before {
+    content: "\F163";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-tick:before {
+    content: "\F164";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-cross:before {
+    content: "\F165";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-alarm-clock:before {
+    content: "\F166";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-stopwatch:before {
+    content: "\F167";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-previous:before {
+    content: "\F168";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-rewind:before {
+    content: "\F169";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-stop:before {
+    content: "\F16A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-play:before {
+    content: "\F16B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-pause:before {
+    content: "\F16C";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-fast-forward:before {
+    content: "\F16D";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-next:before {
+    content: "\F16E";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-user-alt-3:before {
+    content: "\F170";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-user-alt-add:before {
+    content: "\F171";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-user-alt-remove:before {
+    content: "\F172";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-user-alt-add-2:before {
+    content: "\F173";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-user-alt-remove-2:before {
+    content: "\F174";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-fork:before {
+    content: "\F175";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-pull:before {
+    content: "\F176";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-commit:before {
+    content: "\F177";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-watch:before {
+    content: "\F178";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-watch-alt:before {
+    content: "\F179";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-unwatch:before {
+    content: "\F17A";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-settings-alt-3:before {
+    content: "\F17B";
+}
+
+/* line 34, ../scss/batch-webfont.scss */
+.batch-icon-revert:before {
+    content: "\F17C";
+}

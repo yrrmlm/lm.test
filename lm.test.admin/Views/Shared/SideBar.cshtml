@@ -1,0 +1,69 @@
+﻿<nav id="sidebar" class="sidebar bg-dark">
+        <div class="nav-logo">
+            <a href="#"><img src="~/images/logo.png" width="145"></a>
+        </div>
+        <div style="position:relative; top:0; left:0;min-height:800px;">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="nav-item">
+                    <a class="nav-link collapsed" data-toggle="collapse" href="#BootstrapExample" aria-expanded="false" aria-controls="BootstrapExample">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        Bootstrap
+                    </a>
+                    <ul class="nav nav-pills nav-stacked collapse" id="BootstrapExample">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-menu="/Bootstrap/Dropdown" onclick="selectMenu(this);">
+                                <span class="glyphicon glyphicon-menu-right"></span>
+                                下拉菜单
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-menu="/Bootstrap/ButtonGroup" onclick="selectMenu(this);">
+                                <span class="glyphicon glyphicon-menu-right"></span>
+                                按钮组
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="glyphicon glyphicon-menu-right"></span>
+                                按钮式下拉菜单
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="glyphicon glyphicon-menu-right"></span>
+                                输入框组
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li role="presentation" class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        DonetCore
+                    </a>
+                </li>
+                <li role="presentation" class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        Algorithm
+                    </a>
+                </li>
+                <li role="presentation" class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        EChart
+                    </a>
+                </li>
+            </ul>
+        </div>
+</nav>
+
+<script>
+    function selectMenu(ele) {
+        var menuUrl = $(ele).data("menu");
+        //$(ele).css("background-color", "aqua");
+        $.get(menuUrl, {}, function (data) {
+            $("#content").html("").html(data);
+        })
+    }
+</script>

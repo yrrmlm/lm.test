@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,user-scalable=no">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+    <title></title>
+    <meta name="keywords" content="bootstrap 模板_bootstrap 后端模板_bootstrap 模板下载">
+    <meta name="description" content="">
+
+    <!--jquery-->
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+    <!--site-->
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="~/js/site.js"></script>
+    <link href="~/fonts/css/batch-icons.css" rel="stylesheet" />
+
+    <!--bootstap-->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!--BootstrapDemo-->
+    <link href="~/css/BootstrapDemo.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+               @Html.Partial("SideBar")
+            <div class="right-content">
+                    @Html.Partial("TopBar")
+                <div id="content">
+                    @RenderBody()
+                </div>       
+            </div>
+        </div>
+    </div>
+</body>
+</html>
