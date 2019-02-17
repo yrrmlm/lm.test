@@ -1,0 +1,60 @@
+﻿@using lm.test.admin.Models.DotnetCore;
+@model List<TodoItem>
+
+<div class="panel panel-success panel-margin">
+    <div class="panel-heading">入门todoList</div>
+    <div class="panel-body">
+        <table class="table table-striped" id="todoTbl">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>IsCompleted</th>
+                    <th>Operate</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    var i = Model.IndexOf(item);
+                    var cls = "default";
+                    <tr class="@cls">
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.IsCompleted</td>
+                        <td>
+                            <a class="btn btn-info" data-id="@item.Id" data-toggle="modal" data-target="#detailModal" onclick="GetDetail(this);">Detail</a>
+                            <a class="btn btn-primary" data-id="@item.Id" data-toggle="modal" data-target="#detailModal" onclick="GetDetail(this);">Edit</a>
+                            <a class="btn btn-danger" data-id="@item.Id" data-toggle="modal" data-target="#detailModal" onclick="GetDetail(this);">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer"><button class="btn btn-primary">Add</button></div>
+</div>
+
+<div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="detailModalLabel">Detail</h4>
+            </div>
+            <div class="modal-body" id="todoDetail">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+        <script>
+            function GetDetail(ele) {
+                $.get("/todo/GetTodoItem", { id: $(ele).data("id") }, function (data) {
+                    $("#todoDetail").html(data);
+                });
+            }
+        </script>

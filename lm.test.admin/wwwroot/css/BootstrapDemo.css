@@ -1,3 +1,6 @@
 ﻿.panel-margin{
     margin:20px;
 }
+.panel-heading-bg {
+    background-color: aliceblue;
+}

@@ -73,7 +73,7 @@ li {
     letter-spacing: 0.03rem;
     padding: 1.5rem 3rem !important;
     box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1), 0 2px 49px 0 rgba(0, 0, 0, 0.06);
-    z-index: 9000;
+    /*z-index: 9000;*/
     border-radius: 0;
     font-weight: 300;
 }

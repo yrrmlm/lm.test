@@ -1,0 +1,13 @@
+﻿@using lm.test.admin.Models.DotnetCore;
+@model TodoItem
+
+<form>
+    <div class="form-group">
+        <label for="Name">Name:</label>
+        <input type="text" class="form-control" id="Name" placeholder="please input name" value="@Model.Name">
+    </div>
+    <div class="form-group">
+        <label for="IsCompleted">IsCompleted:</label>
+        <input type="text" class="form-control" id="Name" value="@Model.IsCompleted">
+    </div>
+</form>
