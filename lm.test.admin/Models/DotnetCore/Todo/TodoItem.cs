@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace lm.test.admin.Models.DotnetCore
+namespace lm.test.admin.Models.DotnetCore.Todo
 {
     public class TodoItem
     {
