@@ -11,13 +11,13 @@
                     </a>
                     <ul class="nav nav-pills nav-stacked collapse" id="BootstrapExample">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-menu="/Bootstrap/Dropdown" onclick="selectMenu(this);">
+                            <a class="nav-link" href="#" data-action="/Bootstrap/Dropdown" onclick="goAction(this);">
                                 <span class="glyphicon glyphicon-menu-right"></span>
                                 下拉菜单
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-menu="/Bootstrap/ButtonGroup" onclick="selectMenu(this);">
+                            <a class="nav-link" href="#" data-action="/Bootstrap/ButtonGroup" onclick="goAction(this);">
                                 <span class="glyphicon glyphicon-menu-right"></span>
                                 按钮组
                             </a>
@@ -43,9 +43,15 @@
                     </a>
                     <ul class="nav nav-pills nav-stacked collapse" id="DotnetCoreExample">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-menu="/Todo/Index" onclick="selectMenu(this);">
+                            <a class="nav-link" href="#" data-action="/Todo/Index" onclick="goAction(this);">
                                 <span class="glyphicon glyphicon-menu-right"></span>
-                                入门学习
+                                Memory
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-action="/Blogs/Index" onclick="goAction(this);">
+                                <span class="glyphicon glyphicon-menu-right"></span>
+                                EF-NetCore
                             </a>
                         </li>
                     </ul>
@@ -65,13 +71,3 @@
             </ul>
         </div>
 </nav>
-
-<script>
-    function selectMenu(ele) {
-        var menuUrl = $(ele).data("menu");
-        //$(ele).css("background-color", "aqua");
-        $.get(menuUrl, {}, function (data) {
-            $("#content").html("").html(data);
-        })
-    }
-</script>

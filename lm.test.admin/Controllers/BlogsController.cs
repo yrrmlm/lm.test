@@ -19,9 +19,9 @@ namespace lm.test.admin.Controllers
         }
 
         // GET: Blogs
-        public async Task<IActionResult> Index()
+        public async Task<PartialViewResult> Index()
         {
-            return View(await _context.Blogs.ToListAsync());
+            return PartialView(await _context.Blogs.ToListAsync());
         }
 
         // GET: Blogs/Details/5
@@ -29,67 +29,65 @@ namespace lm.test.admin.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return PartialView(NotFound());
             }
 
             var blog = await _context.Blogs
                 .SingleOrDefaultAsync(m => m.BlogId == id);
             if (blog == null)
             {
-                return NotFound();
+                return PartialView(NotFound());
             }
 
-            return View(blog);
+            return PartialView(blog);
         }
 
         // GET: Blogs/Create
-        public IActionResult Create()
+        public PartialViewResult Create()
         {
-            return View();
+            return PartialView();
         }
 
         // POST: Blogs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BlogId,Url")] Blog blog)
+        public async Task<PartialViewResult> Create([Bind("BlogId,Url")] Blog blog)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(blog);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return PartialView("Index", _context.Blogs.ToList());
             }
-            return View(blog);
+            return PartialView(blog);
         }
 
         // GET: Blogs/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<PartialViewResult> Edit(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                return PartialView(NotFound());
             }
 
             var blog = await _context.Blogs.SingleOrDefaultAsync(m => m.BlogId == id);
             if (blog == null)
             {
-                return NotFound();
+                return PartialView(NotFound());
             }
-            return View(blog);
+            return PartialView(blog);
         }
 
         // POST: Blogs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BlogId,Url")] Blog blog)
+        public async Task<PartialViewResult> Edit(int id, [Bind("BlogId,Url")] Blog blog)
         {
             if (id != blog.BlogId)
             {
-                return NotFound();
+                return PartialView(NotFound());
             }
 
             if (ModelState.IsValid)
@@ -103,45 +101,44 @@ namespace lm.test.admin.Controllers
                 {
                     if (!BlogExists(blog.BlogId))
                     {
-                        return NotFound();
+                        return PartialView(NotFound());
                     }
                     else
                     {
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return PartialView("Index", _context.Blogs.ToList());
             }
-            return View(blog);
+            return PartialView(blog);
         }
 
         // GET: Blogs/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<PartialViewResult> Delete(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                return PartialView(NotFound());
             }
 
             var blog = await _context.Blogs
                 .SingleOrDefaultAsync(m => m.BlogId == id);
             if (blog == null)
             {
-                return NotFound();
+                return PartialView(NotFound());
             }
 
-            return View(blog);
+            return PartialView(blog);
         }
 
         // POST: Blogs/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [ActionName("DeleteConfirmed")]
+        public async Task<PartialViewResult> DeleteConfirmed(int id)
         {
             var blog = await _context.Blogs.SingleOrDefaultAsync(m => m.BlogId == id);
             _context.Blogs.Remove(blog);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return PartialView("Index", await _context.Blogs.ToListAsync());
         }
 
         private bool BlogExists(int id)

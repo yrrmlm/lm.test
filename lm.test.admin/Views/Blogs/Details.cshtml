@@ -1,33 +1,23 @@
 ﻿@model lm.test.admin.Models.DotnetCore.Blog.Blog
 
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-
-<div>
-    <h4>Blog</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Url)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Url)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.BlogId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
-</body>
-</html>
+<div class="panel panel-default panel-margin">
+    <div class="panel-heading"></div>
+    <div class="panel-body">
+        <div>
+            <h4>Blog</h4>
+            <hr />
+            <dl class="dl-horizontal" style="margin-left:-130px;">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Url)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Url)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a data-action="/blogs/edit/@Model.BlogId" href="#" onclick="goAction(this);">Edit</a> |
+            <a data-action="/blogs/index" href="#" onclick="goAction(this);">Back to List</a>
+        </div>
+        </div>
+    </div>
