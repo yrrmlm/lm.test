@@ -17,5 +17,10 @@ namespace lm.test.admin.Controllers
         {
             return PartialView();
         }
+
+        public PartialViewResult ButtonDropdown()
+        {
+            return PartialView();
+        }
     }
 }
