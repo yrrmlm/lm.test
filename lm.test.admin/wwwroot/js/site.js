@@ -22,3 +22,4 @@ function blogEditSubmit() {
     });
     return false;
 }
+

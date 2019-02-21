@@ -1,0 +1,24 @@
+﻿@using lm.test.admin.Controllers;
+@model int[,]
+
+<table class="table">
+    @for (int i = 0; i < Model.GetLength(0); i++)
+    {
+        <tr>
+            @for (int j = 0; j < Model.GetLength(1); j++)
+            {
+                if (AlgorithmController.Max == @Model[i, j])
+                {
+                    <td>Max</td>
+                }
+                else
+                {
+                    <td>
+                        @Model[i, j]
+                    </td>
+                }
+            }
+        </tr>
+    }
+
+</table>

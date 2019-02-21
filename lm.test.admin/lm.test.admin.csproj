@@ -16,6 +16,12 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\js\echarts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\lm.algorithm\lm.algorithm.csproj" />
+    <ProjectReference Include="..\lm.tool\lm.tool.csproj" />
   </ItemGroup>
 
 </Project>

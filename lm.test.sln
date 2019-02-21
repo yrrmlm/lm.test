@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lm.test.admin", "lm.test.admin\lm.test.admin.csproj", "{689972C6-DC0F-4197-ACF0-94794CB738D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lm.test.admin", "lm.test.admin\lm.test.admin.csproj", "{689972C6-DC0F-4197-ACF0-94794CB738D9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{72B68077-E1FD-4D6D-BFFE-7D3CA0F17EFC} = {72B68077-E1FD-4D6D-BFFE-7D3CA0F17EFC}
+		{49DB92EF-C46E-4F77-8919-734544FEB667} = {49DB92EF-C46E-4F77-8919-734544FEB667}
+	EndProjectSection
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{97645CBE-7565-48FE-9799-7713CB527020}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lm.algorithm", "lm.algorithm\lm.algorithm.csproj", "{49DB92EF-C46E-4F77-8919-734544FEB667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lm.tool", "lm.tool\lm.tool.csproj", "{72B68077-E1FD-4D6D-BFFE-7D3CA0F17EFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,14 @@ Global
 		{97645CBE-7565-48FE-9799-7713CB527020}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97645CBE-7565-48FE-9799-7713CB527020}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97645CBE-7565-48FE-9799-7713CB527020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49DB92EF-C46E-4F77-8919-734544FEB667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49DB92EF-C46E-4F77-8919-734544FEB667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49DB92EF-C46E-4F77-8919-734544FEB667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49DB92EF-C46E-4F77-8919-734544FEB667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72B68077-E1FD-4D6D-BFFE-7D3CA0F17EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72B68077-E1FD-4D6D-BFFE-7D3CA0F17EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72B68077-E1FD-4D6D-BFFE-7D3CA0F17EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72B68077-E1FD-4D6D-BFFE-7D3CA0F17EFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

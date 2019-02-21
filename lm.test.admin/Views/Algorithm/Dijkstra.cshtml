@@ -1,0 +1,36 @@
+﻿@using lm.test.admin.Controllers;
+@model lm.test.admin.Models.Algorithm.GraphData
+
+
+<div class="panel panel-margin col-md-12">
+    <div class="panel-heading">初始矩阵</div>
+    <div class="panel-body">
+        @Html.Partial("getInitMatrix", AlgorithmController.Graph)
+    </div>
+</div>
+<div class="panel panel-margin col-md-7">
+    <div class="panel-heading">算法图</div>
+    <div class="panel-body" style="height:600px">
+        <div id="graph" style="height:100%">
+            @Html.Partial("getGraph")
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-margin col-md-4">
+    <div class="panel-heading">路径规划</div>
+    <div class="panel-body">
+        <input id="startIndex" type="text" value="0" style="width:25px;" />
+        <input type="button" id="getRoute" value="规划" class="btn btn-primary">
+        <div id="routesPanel" style="margin-top:10px;">
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#getRoute").click(function () {
+        $.get("/Algorithm/getRoute", { startIndex: $("#startIndex").val() }, function (data) {
+            $("#routesPanel").html(data);
+        });
+    });
+</script>

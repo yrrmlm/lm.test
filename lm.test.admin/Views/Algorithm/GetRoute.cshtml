@@ -1,0 +1,30 @@
+﻿@using lm.test.admin.Controllers;
+@model List<lm.test.admin.Models.Algorithm.Route>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">节点</th>
+            <th scope="col">权值</th>
+            <th scope="col">路径</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.PointName</td>
+                @if (AlgorithmController.Max == item.Cost)
+                {
+                    <td>Max</td>
+                }
+                else
+                {
+                    <td> @item.Cost</td>
+                }
+
+                <td>@item.Path</td>
+            </tr>
+        }
+    </tbody>
+</table>
