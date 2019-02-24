@@ -1,0 +1,85 @@
+﻿<script type="text/javascript">
+    var dom = document.getElementById("graph");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    option = {
+        title: {
+            text: ''
+        },
+        tooltip: {},
+        animationDurationUpdate: 1500,
+        animationEasingUpdate: 'quinticInOut',
+        series: [
+            {
+                type: 'tree',
+                //排列方式，横向、纵向
+                orient: 'vertical',
+                //根节点的位置
+                rootLocation: { x: 'center', y: '10%' },
+                //连接线长度
+                layerPadding: 30,
+                //结点间距
+                nodePadding: 20,
+                //图形形状
+                symbol: 'circle',
+                //尺寸大小
+                symbolSize: 40,
+                itemStyle: {
+                    //正常情况显示
+                    normal: {
+                        label: {
+                            show: true,
+                            position: 'inside',
+                            textStyle: {
+                                //字体颜色、大小、加粗
+                                color: '#000',
+                                fontSize: 15,
+                                fontWeight: 'bolder'
+                            }
+                        },
+                        color: '#fff',
+                        lineStyle: {
+                            color: '#000',
+                            width: 1,
+                            type: 'broken'
+                        }
+                    },
+                    //鼠标移上去样式
+                    emphasis: {
+                        label: {
+                            show: false,
+                            textStyle: {
+                                align: 'center',
+                                verticalAlign: 'middle'
+                            }
+                        },
+                        color: '#fff',
+                        borderWidth: 1
+                    }
+                },
+                data: [
+                    {
+                        name: '张三',
+                        //图片大小
+                        symbolSize: [60, 80],
+                        //图片
+                        symbol: '',
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false
+                                }
+                            }
+                        },
+                        children: []
+                    }
+                ]
+            }
+        ]
+    }
+
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>

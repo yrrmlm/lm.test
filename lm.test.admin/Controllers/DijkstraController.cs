@@ -8,9 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace lm.test.admin.Controllers
 {
-    public class AlgorithmController : Controller
+    public class DijkstraController : Controller
     {
-        #region Dijkstra
         public const int Max = 9999;
 
         public static int[,] Graph = new int[,]
@@ -24,7 +23,7 @@ namespace lm.test.admin.Controllers
                     { 10,  Max,  40,  Max,  Max,  Max,Max}
                 };
 
-        public PartialViewResult Dijkstra()
+        public PartialViewResult Index()
         {
             var data = new List<G_Series_Data>();
             var links = new List<G_Series_Link>();
@@ -136,7 +135,5 @@ namespace lm.test.admin.Controllers
             p.name = center.name;
             return p;
         }
-
-        #endregion
     }
 }

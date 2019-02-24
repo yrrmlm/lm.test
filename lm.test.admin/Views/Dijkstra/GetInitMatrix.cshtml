@@ -7,7 +7,7 @@
         <tr>
             @for (int j = 0; j < Model.GetLength(1); j++)
             {
-                if (AlgorithmController.Max == @Model[i, j])
+                if (DijkstraController.Max == @Model[i, j])
                 {
                     <td>Max</td>
                 }

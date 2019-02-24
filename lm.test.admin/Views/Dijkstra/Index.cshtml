@@ -5,7 +5,7 @@
 <div class="panel panel-margin col-md-12">
     <div class="panel-heading">初始矩阵</div>
     <div class="panel-body">
-        @Html.Partial("getInitMatrix", AlgorithmController.Graph)
+        @Html.Partial("getInitMatrix", DijkstraController.Graph)
     </div>
 </div>
 <div class="panel panel-margin col-md-7">
@@ -29,7 +29,7 @@
 
 <script>
     $("#getRoute").click(function () {
-        $.get("/Algorithm/getRoute", { startIndex: $("#startIndex").val() }, function (data) {
+        $.get("/Dijkstra/getRoute", { startIndex: $("#startIndex").val() }, function (data) {
             $("#routesPanel").html(data);
         });
     });
