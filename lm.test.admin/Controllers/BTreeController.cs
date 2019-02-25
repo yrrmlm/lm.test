@@ -19,7 +19,7 @@ namespace lm.test.admin.Controllers
 
         public PartialViewResult Index()
         {
-            return PartialView();
+            return PartialView(bTree);
         }
 
         [ActionName("getTree")]

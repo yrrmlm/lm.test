@@ -21,10 +21,11 @@ namespace lm.algorithm.BTree
         public BTree()
         {
 
-            RootNode = new TreeNode<T>();
-            RootNode.elementNum = 0;
-            RootNode.IsLeaf = true;
-            RootNode.Elements = new List<T> { };
+            RootNode = new TreeNode<T>
+            {
+                elementNum = 0,
+                IsLeaf = true
+            };
             //将节点写入磁盘，做一次IO写
         }
 
@@ -111,7 +112,6 @@ namespace lm.algorithm.BTree
         {
             if (RootNode.elementNum == NumPerNode)
             {
-
                 //如果根节点满了，则对跟节点进行分裂
                 TreeNode<T> newRoot = new TreeNode<T>();
                 newRoot.elementNum = 0;
@@ -141,13 +141,13 @@ namespace lm.algorithm.BTree
             //如果是叶子节点，则寻找合适的位置直接插入
             if (Node.IsLeaf)
             {
-
                 while (i >= 1 && KeyWord.CompareTo(Node.Elements[i - 1]) < 0)
                 {
                     Node.Elements[i] = Node.Elements[i - 1];//所有的元素后推一位
                     i -= 1;
                 }
-                Node.Elements[i - 1] = KeyWord;//将关键字插入节点
+                //Node.Elements[i - 1] = KeyWord;//将关键字插入节点
+                Node.Elements.Add(KeyWord);
                 Node.elementNum += 1;
                 //将节点写入磁盘，IO写+1
             }
@@ -163,7 +163,6 @@ namespace lm.algorithm.BTree
                 {
                     //如果子节点已满，进行节点分裂
                     BTreeSplitNode(Node, i, Node.Pointer[i]);
-
                 }
                 if (KeyWord.CompareTo(Node.Elements[i - 1]) > 0)
                 {
@@ -172,8 +171,6 @@ namespace lm.algorithm.BTree
                 }
                 //迭代找叶子，找到叶子节点后插入
                 BTreeInsertNotFull(Node.Pointer[i], KeyWord);
-
-
             }
         }
     }

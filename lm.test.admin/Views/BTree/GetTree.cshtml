@@ -1,5 +1,5 @@
 ﻿<script type="text/javascript">
-    var dom = document.getElementById("graph");
+    var dom = document.getElementById("bTree");
     var myChart = echarts.init(dom);
     var app = {};
     option = null;
@@ -8,8 +8,6 @@
             text: ''
         },
         tooltip: {},
-        animationDurationUpdate: 1500,
-        animationEasingUpdate: 'quinticInOut',
         series: [
             {
                 type: 'tree',
@@ -22,59 +20,108 @@
                 //结点间距
                 nodePadding: 20,
                 //图形形状
-                symbol: 'circle',
+                symbol: 'rect',
                 //尺寸大小
-                symbolSize: 40,
+                //symbolSize: 40,
                 itemStyle: {
-                    //正常情况显示
-                    normal: {
+                    normal:
+                    {//正常情况显示
                         label: {
                             show: true,
                             position: 'inside',
-                            textStyle: {
-                                //字体颜色、大小、加粗
-                                color: '#000',
-                                fontSize: 15,
-                                fontWeight: 'bolder'
+                            textStyle: {//字体颜色、大小、加粗                            
+                                color: '#111',
+                                fontSize: 15
                             }
                         },
-                        color: '#fff',
+                        color: '#111',
                         lineStyle: {
-                            color: '#000',
+                            color: '#111',
                             width: 1,
                             type: 'broken'
                         }
-                    },
-                    //鼠标移上去样式
-                    emphasis: {
-                        label: {
-                            show: false,
-                            textStyle: {
-                                align: 'center',
-                                verticalAlign: 'middle'
-                            }
-                        },
-                        color: '#fff',
-                        borderWidth: 1
                     }
                 },
                 data: [
                     {
-                        name: '张三',
-                        //图片大小
-                        symbolSize: [60, 80],
-                        //图片
-                        symbol: '',
-                        itemStyle: {
-                            normal: {
-                                label: {
-                                    show: false
-                                }
+                        name: 'M',
+                        symbolSize:40,
+                        value:'',
+                        children: [
+                            {
+                                name: 'E | H',
+                                value: '',
+                                symbolSize:[60,40],
+                                children: [
+                                    {
+                                        name: 'B | C',
+                                        value: '',
+                                        symbolSize: [60, 40],
+                                        children: [
+
+                                        ]
+                                    },
+                                    {
+                                        name: 'F | G',
+                                        value: '',
+                                        symbolSize: [60, 40],
+                                        children: [
+
+                                        ]
+                                    },
+                                    {
+                                        name: 'J | K | L',
+                                        value: '',
+                                        symbolSize: [80, 40],
+                                        children: [
+
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                name: 'Q | T | X',
+                                value: '',
+                                symbolSize: [80, 40],
+                                children: [
+                                    {
+                                        name: 'N | P',
+                                        value: '',
+                                        symbolSize: [60, 40],
+                                        children:[]
+                                    },
+                                    {
+                                        name:'R | S',
+                                        value: '',
+                                        symbolSize: [60, 40],
+                                        children:[]
+                                    },
+                                    {
+                                        name:'V | W',
+                                        value: '',
+                                        symbolSize: [60, 40],
+                                        children:[]
+                                    },
+                                    {
+                                        name:'Y | Z',
+                                        value: '',
+                                        symbolSize: [60, 40],
+                                        children:[]
+                                    }
+                                ]
                             }
-                        },
-                        children: []
+                        ]
                     }
-                ]
+                ],
+                leaves: {    //叶子节点的特殊配置，如上面的树图示例中，叶子节点和非叶子节点的标签位置不同
+                    label: {
+                        normal: {
+                            position: 'right',
+                            verticalAlign: 'middle',
+                            align: 'left'
+                        }
+                    }
+                }
             }
         ]
     }
