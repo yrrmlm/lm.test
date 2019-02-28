@@ -1,1 +1,0 @@
-D:\workspace\dotnet\lm.test\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

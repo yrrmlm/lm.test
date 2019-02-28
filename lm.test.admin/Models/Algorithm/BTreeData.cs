@@ -16,7 +16,7 @@ namespace lm.test.admin.Models.Algorithm
 
         public string value { get; set; }
 
-        public string symbolSize { get; set; }
+        public List<int> symbolSize { get; set; }
 
         public List<LeafData> children { get; set; }
     }

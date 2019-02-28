@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using lm.algorithm.BTree;
+using lm.test.admin.Models.Algorithm;
 using Microsoft.AspNetCore.Mvc;
 
 namespace lm.test.admin.Controllers
@@ -11,18 +12,27 @@ namespace lm.test.admin.Controllers
     {
         private static BTree<int> bTree;
 
+        public static TreeData treeData;
+
         public BTreeController()
         {
-            bTree = new BTree<int>();
-            bTree.BtreeInsert(5);
+            if (bTree == null)
+            {
+                bTree = new BTree<int>();
+                bTree.BtreeInsert(5);
+                treeData = new TreeData
+                {
+                    data = new List<LeafData>()
+                };
+            }
         }
 
         public PartialViewResult Index()
         {
-            return PartialView(bTree);
+            SetTreeData(bTree);
+            return PartialView();
         }
 
-        [ActionName("getTree")]
         public PartialViewResult GetTree()
         {
             return PartialView();
@@ -36,7 +46,9 @@ namespace lm.test.admin.Controllers
 
         public PartialViewResult InsertKey(int key)
         {
-            return PartialView();
+            bTree.BtreeInsert(key);
+            SetTreeData(bTree);
+            return PartialView("Index");
         }
 
         public PartialViewResult DeleteKey(int key)
@@ -47,6 +59,43 @@ namespace lm.test.admin.Controllers
         public PartialViewResult SearchKey(int key)
         {
             return PartialView();
+        }
+
+        private void SetTreeData(BTree<int> bTree)
+        {
+            treeData.data = new List<LeafData>();
+            var treeNode = bTree.RootNode;
+            if(treeNode.Elements != null && treeNode.Elements.Count> 0)
+            {
+                treeData.data.Add(new LeafData
+                {
+                    name = string.Join("|",treeNode.Elements),
+                    value= string.Empty,
+                    symbolSize = new List<int> { 40 + (treeNode.elementNum - 1) * 15, 40 },
+                    children = GetLeafDatas(treeNode.Pointer)
+                });
+            }
+        }
+
+        private List<LeafData> GetLeafDatas(List<TreeNode<int>> treeNodes)
+        {
+            var list = new List<LeafData>();
+            if (treeNodes == null || treeNodes.Count == 0) return list;     
+            foreach(var tn in treeNodes)
+            {
+                if (tn != null && tn.elementNum > 0)
+                {
+                    list.Add(new LeafData
+                    {
+                        name = string.Join("|", tn.Elements),
+                        value = string.Empty,
+                        symbolSize = new List<int> { (tn.elementNum - 1) * 15 + 40, 40 },
+                        children = GetLeafDatas(tn.Pointer)
+                    });
+                }
+            }
+
+            return list;
         }
     }
 }

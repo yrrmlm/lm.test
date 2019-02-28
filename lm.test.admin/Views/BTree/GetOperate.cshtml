@@ -1,1 +1,21 @@
-﻿
+﻿<div class="input-group">
+    <input type="text" class="form-control" aria-label="" id="addNodeText">
+    <div class="input-group-btn">
+        <button type="button" class="btn btn-info" onclick="addNode(this);">新增节点</button>
+    </div>
+</div>
+<hr />
+<div class="input-group">
+    <input type="text" class="form-control" aria-label="" id="searchNodeText">
+    <div class="input-group-btn">
+        <button type="button" class="btn btn-info">查找节点</button>
+    </div>
+</div>
+
+<script>
+    function addNode(ele) {
+        $.get("/BTree/InsertKey", { key: $("#addNodeText").val() }, function (data) { 
+            $("#content").html(data);
+        })
+    }
+</script>
