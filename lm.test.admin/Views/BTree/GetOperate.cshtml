@@ -1,4 +1,10 @@
-﻿<div class="input-group">
+﻿
+<div class="input-group">
+    <div class="input-group-btn">
+        <button type="button" class="btn btn-info" onclick="clearTree();">清空</button>
+    </div>
+</div>
+<div class="input-group">
     <input type="text" class="form-control" aria-label="" id="addNodeText">
     <div class="input-group-btn">
         <button type="button" class="btn btn-info" onclick="addNode(this);">新增节点</button>
@@ -12,9 +18,17 @@
     </div>
 </div>
 
+
+
 <script>
     function addNode(ele) {
         $.get("/BTree/InsertKey", { key: $("#addNodeText").val() }, function (data) { 
+            $("#content").html(data);
+        })
+    }
+
+    function clearTree() {
+        $.get("/BTree/ClearTree", { }, function (data) {
             $("#content").html(data);
         })
     }

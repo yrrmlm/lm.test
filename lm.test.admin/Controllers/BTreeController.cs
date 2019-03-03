@@ -18,8 +18,7 @@ namespace lm.test.admin.Controllers
         {
             if (bTree == null)
             {
-                bTree = new BTree<int>();
-                bTree.BtreeInsert(5);
+                bTree = new BTree<int>(3);
                 treeData = new TreeData
                 {
                     data = new List<LeafData>()
@@ -46,7 +45,7 @@ namespace lm.test.admin.Controllers
 
         public PartialViewResult InsertKey(int key)
         {
-            bTree.BtreeInsert(key);
+            bTree.BTreeInsert(key);
             SetTreeData(bTree);
             return PartialView("Index");
         }
@@ -61,10 +60,21 @@ namespace lm.test.admin.Controllers
             return PartialView();
         }
 
+        public PartialViewResult ClearTree()
+        {
+            bTree = new BTree<int>(3);
+            treeData = new TreeData
+            {
+                data = new List<LeafData>()
+            };
+
+            return PartialView("Index");
+        }
+
         private void SetTreeData(BTree<int> bTree)
         {
             treeData.data = new List<LeafData>();
-            var treeNode = bTree.RootNode;
+            var treeNode = bTree._rootNode;
             if(treeNode.Elements != null && treeNode.Elements.Count> 0)
             {
                 treeData.data.Add(new LeafData
