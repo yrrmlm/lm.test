@@ -26,8 +26,40 @@ namespace lm.algorithm.BTree
             {
                 throw new Exception("找不到可以插入的叶子节点");
             }
-
+            var tn = SearchKey(key);
+            if(tn != null)
+            {
+                throw new Exception("已存在key，不要重复插入");
+            }
             ToInsert(key, treeNode);
+        }
+
+        public TreeNode<T> SearchKey(T key)
+        {
+           return GetKey(_rootNode, key);
+        }
+
+        private TreeNode<T> GetKey(TreeNode<T> curNode,T key)
+        {
+            TreeNode<T> searchNode = null;
+            if (curNode.Elements.Contains(key))
+            {
+                curNode.BeFind = true;
+                searchNode = curNode;
+            }
+            else if (curNode.Pointer.Count > 0)
+            {
+                foreach (var node in curNode.Pointer)
+                {
+                    searchNode = GetKey(node, key);
+                    if (searchNode != null)
+                    {
+                        break;
+                    }
+                }
+            }
+
+            return searchNode;
         }
 
         private void ToInsert(T key,TreeNode<T> curNode)
@@ -178,7 +210,7 @@ namespace lm.algorithm.BTree
         /// <param name="key"></param>
         /// <param name="curNode"></param>
         /// <returns></returns>
-        public TreeNode<T> GetBeInsertLeaf(T key,TreeNode<T> curNode)
+        private TreeNode<T> GetBeInsertLeaf(T key,TreeNode<T> curNode)
         {
             if (curNode.Pointer.Count == 0) //如果当前节点是叶子节点
             {

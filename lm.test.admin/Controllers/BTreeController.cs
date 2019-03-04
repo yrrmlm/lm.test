@@ -57,7 +57,9 @@ namespace lm.test.admin.Controllers
 
         public PartialViewResult SearchKey(int key)
         {
-            return PartialView();
+            bTree.SearchKey(key);
+            SetTreeData(bTree);
+            return PartialView("Index");
         }
 
         public PartialViewResult ClearTree()
@@ -79,10 +81,12 @@ namespace lm.test.admin.Controllers
             {
                 treeData.data.Add(new LeafData
                 {
-                    name = string.Join("|",treeNode.Elements),
-                    value= string.Empty,
+                    name = string.Join("|", treeNode.Elements),
+                    value = string.Empty,
                     symbolSize = new List<int> { 40 + (treeNode.elementNum - 1) * 15, 40 },
-                    children = GetLeafDatas(treeNode.Pointer)
+                    children = GetLeafDatas(treeNode.Pointer),
+                    itemStyle = treeNode.BeFind ? new ItemStyle { borderColor = "#333",color="#ccc"} : new ItemStyle { },
+                    symbol = treeNode.BeFind ? "circle" : "rect"
                 });
             }
         }
@@ -100,7 +104,9 @@ namespace lm.test.admin.Controllers
                         name = string.Join("|", tn.Elements),
                         value = string.Empty,
                         symbolSize = new List<int> { (tn.elementNum - 1) * 15 + 40, 40 },
-                        children = GetLeafDatas(tn.Pointer)
+                        children = GetLeafDatas(tn.Pointer),
+                        itemStyle = tn.BeFind ? new ItemStyle { borderColor = "#444", color = "#ccc" } : new ItemStyle { },
+                        symbol = tn.BeFind ? "circle" : "rect"
                     });
                 }
             }

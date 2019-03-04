@@ -11,6 +11,8 @@ namespace lm.algorithm.BTree
         public List<TreeNode<T>> Pointer = new List<TreeNode<T>>();//元素指针，存在elementNum+1
         public bool IsLeaf = true;//是否为叶子节点
         public TreeNode<T> Parent = null;//当前节点的父节点
+        public bool BeFind = false;
+
 
         public void Clear()
         {

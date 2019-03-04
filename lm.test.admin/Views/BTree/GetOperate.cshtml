@@ -14,7 +14,7 @@
 <div class="input-group">
     <input type="text" class="form-control" aria-label="" id="searchNodeText">
     <div class="input-group-btn">
-        <button type="button" class="btn btn-info">查找节点</button>
+        <button type="button" class="btn btn-info" onclick="searchKey();">查找节点</button>
     </div>
 </div>
 
@@ -29,6 +29,12 @@
 
     function clearTree() {
         $.get("/BTree/ClearTree", { }, function (data) {
+            $("#content").html(data);
+        })
+    }
+
+    function searchKey() {
+        $.get("/BTree/SearchKey", { key: $("#searchNodeText").val() }, function (data) {
             $("#content").html(data);
         })
     }
