@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\lm.algorithm\lm.algorithm.csproj" />
+    <ProjectReference Include="..\lm.Infrastructure\lm.Infrastructure.csproj" />
     <ProjectReference Include="..\lm.tool\lm.tool.csproj" />
   </ItemGroup>
 

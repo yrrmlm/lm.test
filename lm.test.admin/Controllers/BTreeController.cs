@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using lm.algorithm.BTree;
+using lm.Infrastructure;
 using lm.test.admin.Models.Algorithm;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,12 +11,15 @@ namespace lm.test.admin.Controllers
 {
     public class BTreeController : Controller
     {
+        private RedisClient _redisClient;
+
         private static BTree<int> bTree;
 
         public static TreeData treeData;
 
-        public BTreeController()
+        public BTreeController(RedisClient redisClient)
         {
+            _redisClient = redisClient;
             if (bTree == null)
             {
                 bTree = new BTree<int>(3);
@@ -45,8 +49,11 @@ namespace lm.test.admin.Controllers
 
         public PartialViewResult InsertKey(int key)
         {
-            bTree.BTreeInsert(key);
-            SetTreeData(bTree);
+            if (_redisClient.GetDatabase().StringIncrement(key.ToString()) <= 1) //防止重复添加
+            {
+                bTree.BTreeInsert(key);
+                SetTreeData(bTree);
+            }
             return PartialView("Index");
         }
 

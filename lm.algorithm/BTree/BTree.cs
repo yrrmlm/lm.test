@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lm.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,6 +12,11 @@ namespace lm.algorithm.BTree
         private int _m = 6;
 
         private int _min = 3;
+
+        public BTree()
+        {
+
+        }
 
         public BTree(int m)
         {

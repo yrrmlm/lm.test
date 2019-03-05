@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using System.Threading.Tasks;
+using lm.Infrastructure;
 using lm.test.admin.Models.DotnetCore;
 using lm.test.admin.Models.DotnetCore.Blog;
 using lm.test.admin.Models.DotnetCore.Todo;
@@ -35,6 +36,7 @@ namespace lm.test.admin
             services.Configure<WebEncoderOptions>(options =>
                           options.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.BasicLatin,
                           UnicodeRanges.CjkUnifiedIdeographs));
+            services.AddSingleton(typeof(RedisClient), new RedisClient(Configuration),);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
