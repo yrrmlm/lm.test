@@ -7,11 +7,11 @@ namespace lm.Infrastructure
 {
     public class RedisClient : IDisposable
     {
-        private IConfiguration _config;
+        private IConfigurationSection _config;
 
         private ConcurrentDictionary<string, ConnectionMultiplexer> _connections;
 
-        public RedisClient(IConfiguration config)
+        public RedisClient(IConfigurationSection config)
         {
             _config = config;
             _connections = new ConcurrentDictionary<string, ConnectionMultiplexer>();
@@ -36,7 +36,7 @@ namespace lm.Infrastructure
         /// <returns></returns>
         private IConfigurationSection CheckeConfig(string configName)
         {
-            IConfigurationSection redisConfig = _config.GetSection("RedisConfig").GetSection(configName);
+            IConfigurationSection redisConfig = _config.GetSection(configName);
             if (redisConfig == null)
             {
                 throw new ArgumentNullException($"{configName}找不到对应的RedisConfig配置！");

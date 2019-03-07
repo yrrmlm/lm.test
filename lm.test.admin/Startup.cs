@@ -36,7 +36,7 @@ namespace lm.test.admin
             services.Configure<WebEncoderOptions>(options =>
                           options.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.BasicLatin,
                           UnicodeRanges.CjkUnifiedIdeographs));
-            services.AddSingleton(typeof(RedisClient), new RedisClient(Configuration),);
+            services.AddSingleton(typeof(RedisClient), new RedisClient(Configuration.GetSection("RedisConfig")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

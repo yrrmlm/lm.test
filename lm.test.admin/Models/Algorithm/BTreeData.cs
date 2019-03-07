@@ -27,7 +27,7 @@ namespace lm.test.admin.Models.Algorithm
 
     public class ItemStyle
     {
-        public string borderColor { get; set; }
+        public string shadowColor { get; set; }
 
         public string color { get; set; }
     }

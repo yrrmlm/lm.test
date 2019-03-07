@@ -49,7 +49,7 @@ namespace lm.test.admin.Controllers
 
         public PartialViewResult InsertKey(int key)
         {
-            if (_redisClient.GetDatabase().StringIncrement(key.ToString()) <= 1) //防止重复添加
+            if (_redisClient.GetDatabase("local").StringIncrement(key.ToString()) <= 1) //防止重复添加
             {
                 bTree.BTreeInsert(key);
                 SetTreeData(bTree);
@@ -92,7 +92,7 @@ namespace lm.test.admin.Controllers
                     value = string.Empty,
                     symbolSize = new List<int> { 40 + (treeNode.elementNum - 1) * 15, 40 },
                     children = GetLeafDatas(treeNode.Pointer),
-                    itemStyle = treeNode.BeFind ? new ItemStyle { borderColor = "#333",color="#ccc"} : new ItemStyle { },
+                    itemStyle = treeNode.BeFind ? new ItemStyle { shadowColor = "#333",color="#ccc"} : new ItemStyle { },
                     symbol = treeNode.BeFind ? "circle" : "rect"
                 });
             }
@@ -112,7 +112,7 @@ namespace lm.test.admin.Controllers
                         value = string.Empty,
                         symbolSize = new List<int> { (tn.elementNum - 1) * 15 + 40, 40 },
                         children = GetLeafDatas(tn.Pointer),
-                        itemStyle = tn.BeFind ? new ItemStyle { borderColor = "#444", color = "#ccc" } : new ItemStyle { },
+                        itemStyle = tn.BeFind ? new ItemStyle { shadowColor = "#444", color = "#ccc" } : new ItemStyle { },
                         symbol = tn.BeFind ? "circle" : "rect"
                     });
                 }
