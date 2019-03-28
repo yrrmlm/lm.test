@@ -2,7 +2,7 @@
 
 namespace lm.tool
 {
-    public class CalcPoint
+    public class CoordHelper
     {
         /// <summary>
         /// 根据角度获取边上点位置

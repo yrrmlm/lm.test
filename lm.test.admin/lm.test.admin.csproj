@@ -17,11 +17,13 @@
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\js\echarts\" />
+    <Folder Include="wwwroot\file\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\lm.algorithm\lm.algorithm.csproj" />
     <ProjectReference Include="..\lm.Infrastructure\lm.Infrastructure.csproj" />
+    <ProjectReference Include="..\lm.model\lm.model.csproj" />
     <ProjectReference Include="..\lm.tool\lm.tool.csproj" />
   </ItemGroup>
 

@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="iTextSharp" Version="5.5.13" />
+    <Folder Include="Interface\Request\" />
+    <Folder Include="Interface\Response\" />
   </ItemGroup>
 
 </Project>
