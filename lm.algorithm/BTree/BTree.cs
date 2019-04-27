@@ -1,6 +1,7 @@
 ﻿using lm.Infrastructure;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace lm.algorithm.BTree
@@ -9,9 +10,9 @@ namespace lm.algorithm.BTree
     {
         public TreeNode<T> _rootNode;
 
-        private int _m = 6;
+        private int _m = 6; //阶
 
-        private int _min = 3;
+        private int _min = 3; //最小关键字数
 
         public BTree()
         {
@@ -43,6 +44,66 @@ namespace lm.algorithm.BTree
         public TreeNode<T> SearchKey(T key)
         {
            return GetKey(_rootNode, key);
+        }
+
+        public void DeleteKey(T key)
+        {
+            DeleteKey(key, _rootNode);
+        }
+
+        private void DeleteKey(T key,TreeNode<T> curNode)
+        {
+            if (curNode.Elements.Contains(key)) //key存在于当前节点
+            {
+                if (curNode.Pointer == null || curNode.Pointer.Count == 0) //当前节点是叶子节点
+                {
+                    if (curNode.elementNum > _min)
+                    {
+                        curNode.Elements.Remove(key);
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else //不是叶子节点
+                {
+                    var pos = curNode.Elements.IndexOf(key); //key在当前节点中的位置
+                    if (curNode.Pointer[pos].elementNum > _min) //左孩子数量大于最小值
+                    {
+                        var maxKey = curNode.Pointer[pos].Elements.Max(); //左孩子最大key
+                        curNode.Elements[pos] = maxKey; //左孩子最大key赋值待删除key
+                        DeleteKey(maxKey, curNode.Pointer[pos]); //删除左孩子最大key
+                    }
+                    else if (curNode.Pointer[pos + 1].elementNum > _min) //右孩子数量大于最小值
+                    {
+                        var minKey = curNode.Pointer[pos + 1].Elements.Min(); //右孩子最小key
+                        curNode.Elements[pos] = minKey; //右孩子最小key赋值待删除key
+                        DeleteKey(minKey, curNode.Pointer[pos + 1]); //删除右孩子最小key
+                    }
+                    else
+                    {
+
+                    }
+                }
+            }
+            else //不在则继续向下找
+            {
+                if (curNode.Pointer != null && curNode.Pointer.Count > 0)
+                {
+                    int pos = curNode.elementNum;
+                    for (int i = 0; i < curNode.elementNum; i++)
+                    {
+                        if (key.CompareTo(curNode.Elements[i]) < 0)
+                        {
+                            pos = i;
+                            break;
+                        }
+                    }
+
+                    DeleteKey(key, curNode.Pointer[pos]);
+                }
+            }
         }
 
         private TreeNode<T> GetKey(TreeNode<T> curNode,T key)

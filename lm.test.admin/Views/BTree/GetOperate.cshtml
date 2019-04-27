@@ -4,6 +4,14 @@
         <button type="button" class="btn btn-info" onclick="clearTree();">清空</button>
     </div>
 </div>
+<hr />
+<div class="input-group">
+    <input type="text" class="form-control" aria-label="" id="initTreeText">
+    <div class="input-group-btn">
+        <button type="button" class="btn btn-info" onclick="initTree(this);">初始化</button>
+    </div>
+</div>
+<hr />
 <div class="input-group">
     <input type="text" class="form-control" aria-label="" id="addNodeText">
     <div class="input-group-btn">
@@ -17,24 +25,42 @@
         <button type="button" class="btn btn-info" onclick="searchKey();">查找节点</button>
     </div>
 </div>
-
+<hr />
+<div class="input-group">
+    <input type="text" class="form-control" aria-label="" id="deleteNodeText">
+    <div class="input-group-btn">
+        <button type="button" class="btn btn-info" onclick="deleteKey();">删除节点</button>
+    </div>
+</div>
 
 
 <script>
     function addNode(ele) {
-        $.get("/BTree/InsertKey", { key: $("#addNodeText").val() }, function (data) { 
+        $.get("/BTree/InsertKey", { key: $("#addNodeText").val() }, function (data) {
             $("#content").html(data);
         })
     }
 
     function clearTree() {
-        $.get("/BTree/ClearTree", { }, function (data) {
+        $.get("/BTree/ClearTree", {}, function (data) {
             $("#content").html(data);
         })
     }
 
     function searchKey() {
         $.get("/BTree/SearchKey", { key: $("#searchNodeText").val() }, function (data) {
+            $("#content").html(data);
+        })
+    }
+
+    function deleteKey() {
+        $.get("/BTree/DeleteKey", { key: $("#deleteNodeText").val() }, function (data) {
+            $("#content").html(data);
+        })
+    }
+
+    function  initTree() {
+        $.get("/BTree/InitTree", { m: $("#initTreeText").val() }, function (data) {
             $("#content").html(data);
         })
     }

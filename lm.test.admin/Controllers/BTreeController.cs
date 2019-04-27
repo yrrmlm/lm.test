@@ -22,7 +22,7 @@ namespace lm.test.admin.Controllers
             _redisClient = redisClient;
             if (bTree == null)
             {
-                bTree = new BTree<int>(3);
+                bTree = new BTree<int>(4);
                 treeData = new TreeData
                 {
                     data = new List<LeafData>()
@@ -49,7 +49,7 @@ namespace lm.test.admin.Controllers
 
         public PartialViewResult InsertKey(int key)
         {
-            if (_redisClient.GetDatabase("local").StringIncrement(key.ToString()) <= 1) //防止重复添加
+            //if (_redisClient.GetDatabase("local").StringIncrement(key.ToString()) <= 1) //防止重复添加
             {
                 bTree.BTreeInsert(key);
                 SetTreeData(bTree);
@@ -59,13 +59,28 @@ namespace lm.test.admin.Controllers
 
         public PartialViewResult DeleteKey(int key)
         {
-            return PartialView();
+            bTree.DeleteKey(key);      
+            SetTreeData(bTree);
+            return PartialView("Index");
         }
 
         public PartialViewResult SearchKey(int key)
         {
             bTree.SearchKey(key);
             SetTreeData(bTree);
+            return PartialView("Index");
+        }
+
+        public PartialViewResult InitTree(int m)
+        {
+            if (m >= 2)
+            {
+                bTree = new BTree<int>(m);
+                treeData = new TreeData
+                {
+                    data = new List<LeafData>()
+                };
+            }
             return PartialView("Index");
         }
 
